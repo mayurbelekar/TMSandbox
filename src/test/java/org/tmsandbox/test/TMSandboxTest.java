@@ -25,6 +25,7 @@ public class TMSandboxTest {
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Test
 	public void testCategoryTMSandbox() {
+		Reporter.log("Starting new testcase: testCategoryTMSandbox", true);
 		Map<String, String> headers = new HashMap<String, String>();
 		MultivaluedMap<String, String> queryParams=new MultivaluedMapImpl();
 		queryParams.add("catalogue", "false");
@@ -46,8 +47,9 @@ public class TMSandboxTest {
 			}
 		}
 		
-		
+		Reporter.log("========================================", true);
 		Reporter.log("*******   Acceptance Criteria   *******", true);
+		Reporter.log("========================================", true);
 		Reporter.log("Verifing the Name: "+TMSandboxConstants.CARBON_CREDITS, true);
 		Assert.assertEquals(name, TMSandboxConstants.CARBON_CREDITS);
 		
@@ -56,6 +58,7 @@ public class TMSandboxTest {
 		
 		Reporter.log("Verifing the Description contains: "+TMSandboxConstants.DESCRIPTION_LARGER_IMAGE, true);
 		Assert.assertTrue(promotionDescription.contains(TMSandboxConstants.DESCRIPTION_LARGER_IMAGE));
+		Reporter.log("Completed the testcase: testCategoryTMSandbox", true);
 		
 	}
 }
