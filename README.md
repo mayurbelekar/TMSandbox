@@ -1,2 +1,0 @@
-# TMSandbox
-TMSandbox API Automation
