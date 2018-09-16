@@ -9,13 +9,14 @@ import javax.ws.rs.core.MultivaluedMap;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Reporter;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.tmsandbox.JerseyClientUtils;
 
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.core.util.MultivaluedMapImpl;
 
-import junit.framework.Assert;
+
 
 public class TMSandboxTest {
 	JerseyClientUtils clientUtils = new JerseyClientUtils();
@@ -47,7 +48,7 @@ public class TMSandboxTest {
 		
 		Reporter.log("Acceptance Criteria:", true);
 		Reporter.log("Verifing the Name: "+TMSandboxConstants.CARBON_CREDITS, true);
-		Assert.assertEquals(TMSandboxConstants.CARBON_CREDITS, name);
+		Assert.assertEquals(name, TMSandboxConstants.CARBON_CREDITS);
 		
 		Reporter.log("Verifing the "+TMSandboxConstants.CAN_RELIST, true);
 		Assert.assertTrue(canRelist);
