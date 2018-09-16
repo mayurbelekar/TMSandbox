@@ -46,7 +46,8 @@ public class TMSandboxTest {
 			}
 		}
 		
-		Reporter.log("Acceptance Criteria:", true);
+		
+		Reporter.log("*******   Acceptance Criteria   *******", true);
 		Reporter.log("Verifing the Name: "+TMSandboxConstants.CARBON_CREDITS, true);
 		Assert.assertEquals(name, TMSandboxConstants.CARBON_CREDITS);
 		
